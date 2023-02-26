@@ -795,6 +795,7 @@ class RNIapIos: RCTEventEmitter, SKRequestDelegate, SKPaymentTransactionObserver
                     "transactionId": transaction.transactionIdentifier,
                     "productId": transaction.payment.productIdentifier,
                     "transactionReceipt": receiptData?.base64EncodedString(options: [.endLineWithCarriageReturn])
+                    "applicationUsername": transaction.payment.applicationUsername //appAccountToken
                 ]
 
                 // originalTransaction is available for restore purchase and purchase of cancelled/expired subscriptions
