@@ -794,7 +794,7 @@ class RNIapIos: RCTEventEmitter, SKRequestDelegate, SKPaymentTransactionObserver
                     "transactionDate": transaction.transactionDate?.millisecondsSince1970,
                     "transactionId": transaction.transactionIdentifier,
                     "productId": transaction.payment.productIdentifier,
-                    "transactionReceipt": receiptData?.base64EncodedString(options: [.endLineWithCarriageReturn])
+                    "transactionReceipt": receiptData?.base64EncodedString(options: [.endLineWithCarriageReturn]),
                     "applicationUsername": transaction.payment.applicationUsername //appAccountToken
                 ]
 
